@@ -189,7 +189,7 @@ USE_TZ = True
 
 # CSRF_COOKIE_SECURE = True
 
-SESSION_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
 
 # Custom user model
 AUTH_USER_MODEL = "users.User"
