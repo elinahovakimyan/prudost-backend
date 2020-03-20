@@ -59,7 +59,7 @@ class GoalViewset(viewsets.ModelViewSet):
     queryset = Goal.objects.all()
 
     def get_queryset(self):
-        return Goal.objects.filter(user=self.request.user.id).order_by('-createdAt')
+        return Goal.objects.filter(user=self.request.user.id).order_by('-created_at')
 
     # def get_queryset(self):
     #     return User.objects.filter(user=self.request.user.id)
@@ -78,7 +78,7 @@ class TaskViewset(viewsets.ModelViewSet):
     queryset = Task.objects.all()
 
     def get_queryset(self):
-        return Task.objects.filter(user=self.request.user.id).order_by('-createdAt')
+        return Task.objects.filter(user=self.request.user.id).order_by('-created_at')
 
 
 class CategoryViewset(viewsets.ModelViewSet):
