@@ -12,7 +12,7 @@ class Goal(models.Model):
         'Category', related_name='categories', on_delete=models.CASCADE, blank=True, null=True
     )
     user = models.ForeignKey(User, related_name='users_1', on_delete=models.CASCADE, blank=True, null=True)
-    deadline = models.DateField()
+    deadline = models.DateTimeField()
     created_at = models.DateTimeField(null=True)
     completed = models.BooleanField(default=False)
 
