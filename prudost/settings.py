@@ -173,6 +173,10 @@ LOGIN_REDIRECT_URL = "users:redirect"
 
 ACCOUNT_ADAPTER = "users.adapters.AccountAdapter"
 
+REST_AUTH_SERIALIZERS = {
+    # Replace password reset serializer to fix 500 error
+    "PASSWORD_RESET_SERIALIZER": "api.serializers.PasswordSerializer",
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
