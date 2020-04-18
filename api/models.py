@@ -13,7 +13,7 @@ class Goal(models.Model):
     )
     user = models.ForeignKey(User, related_name='users_1', on_delete=models.CASCADE, blank=True, null=True)
     deadline = models.DateTimeField()
-    order = models.IntegerField(null=True)
+    order = models.IntegerField(default=0)
     created_at = models.DateTimeField(null=True)
     completed = models.BooleanField(default=False)
 
