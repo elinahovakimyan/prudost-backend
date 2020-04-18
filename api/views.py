@@ -59,7 +59,7 @@ class GoalViewset(viewsets.ModelViewSet):
     queryset = Goal.objects.all()
 
     def get_queryset(self):
-        return Goal.objects.filter(user=self.request.user.id).order_by('-order')
+        return Goal.objects.filter(user=self.request.user.id).order_by('order')
 
     # def get_queryset(self):
     #     return User.objects.filter(user=self.request.user.id)
