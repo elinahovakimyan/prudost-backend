@@ -40,6 +40,7 @@ class Task(models.Model):
 class Category(models.Model):
     title = models.CharField(max_length=50, blank=True, null=True)
     color = models.CharField(max_length=50, blank=True, null=True)
+    order = models.IntegerField(null=True)
 
     class Meta:
         verbose_name_plural = 'Categories'

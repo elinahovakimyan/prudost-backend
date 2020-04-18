@@ -87,6 +87,9 @@ class CategoryViewset(viewsets.ModelViewSet):
 
     queryset = Category.objects.all()
 
+    def get_queryset(self):
+        return Category.objects.all().order_by('order')
+
 
 class RewardViewset(viewsets.ModelViewSet):
     serializer_class = RewardSerializer
